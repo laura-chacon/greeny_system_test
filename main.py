@@ -122,9 +122,9 @@ steps = [setup,
          signup,
          get_user_with_email_assert_found,
          login,
-         #get_facts,
-         #get_sections,
-         #get_action_types,
+         get_facts,
+         get_sections,
+         get_action_types,
          get_next_action_id,
          create_action,
          get_next_action_id,
@@ -132,14 +132,3 @@ steps = [setup,
          create_action_unauthorized,
          get_history]
 run_steps(steps)
-
-
-"""
-
-r = requests.get(
-    "http://127.0.0.1:8005/users/" + uid + "/history",
-    headers={"Content-Type": "application/json",
-             "Accept": "application/json",
-             "Token": auth_token}
-)
-"""
